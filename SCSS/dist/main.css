@@ -102,13 +102,16 @@ header nav ul li a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 30px;
     text-align: center;
     width: calc(100% - 40px);
     margin: 20px;
     padding: 50px;
+    gap: 0;
     background-color: white;
     display: none;
+  }
+  header nav ul li {
+    margin-bottom: 30px;
   }
   header nav ul li a {
     font-size: 18px;

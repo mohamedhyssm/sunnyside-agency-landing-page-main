@@ -49,17 +49,19 @@ header {
         left: 0;
         // flex
         flex-direction: column;
-        gap: 30px;
         text-align: center;
         // width - margin 
         width: calc(100% - 40px);
         margin: 20px;
         padding: 50px;
+        gap: 0;
         // color
         background-color: $whiteColor;
         display: none;
 
         li {
+          margin-bottom: 30px;
+
           a {
             font-size: 18px;
             color: hsl(213, 9%, 39%);
