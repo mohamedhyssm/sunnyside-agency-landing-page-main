@@ -1,0 +1,423 @@
+/* start glable-rules */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Fraunces', serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end glable-rules */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Barlow', sans-serif;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  z-index: 1000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header h1 {
+  color: white;
+}
+header nav svg {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  header nav svg {
+    display: block;
+  }
+}
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header nav ul li a:hover {
+  font-family: 'Fraunces', serif;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+}
+@media (max-width: 767px) {
+  header nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    width: calc(100% - 40px);
+    margin: 20px;
+    padding: 50px;
+    background-color: white;
+    display: none;
+  }
+  header nav ul li a {
+    font-size: 18px;
+    color: #5a636c;
+  }
+  header nav ul::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -29px;
+    border: 15px solid;
+    border-color: transparent white white transparent;
+  }
+  header nav ul.ul-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.landing {
+  height: 100vh;
+  position: relative;
+}
+.landing img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.landing h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -200px);
+          transform: translate(-50%, -200px);
+  width: 100%;
+  color: white;
+  letter-spacing: 5px;
+  font-weight: 900;
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.landing svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+}
+@media (max-width: 767px) {
+  .landing svg {
+    -webkit-transform: translate(-50%, 75%);
+            transform: translate(-50%, 75%);
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+main .image {
+  margin-bottom: -4px;
+  position: relative;
+}
+main .image img {
+  width: 100%;
+}
+main .image div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  height: 150px;
+  padding: 200px;
+  text-align: center;
+}
+@media (max-width: 1440px) {
+  main .image div {
+    padding: 100px;
+  }
+}
+@media (max-width: 972px) {
+  main .image div {
+    padding: 30px;
+  }
+}
+main .image div h3 {
+  margin-bottom: 10px;
+}
+main .image div p {
+  line-height: 1.6;
+}
+main .image div.graphic-design h3,
+main .image div.graphic-design p {
+  color: #25564b;
+}
+main .image div.photography h3,
+main .image div.photography p {
+  color: #19536b;
+}
+main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+main .content .text {
+  width: 68%;
+}
+@media (max-width: 767px) {
+  main .content .text {
+    text-align: center;
+  }
+}
+main .content .text h3 {
+  font-weight: 900;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+@media (max-width: 950px) {
+  main .content .text h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  main .content .text h3 {
+    margin-bottom: 20px;
+  }
+}
+main .content .text p {
+  font-family: 'Barlow', sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #818498;
+}
+@media (max-width: 950px) {
+  main .content .text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  main .content .text p {
+    margin-bottom: 20px;
+  }
+}
+main .content .text a {
+  font-family: 'Fraunces', serif;
+  display: block;
+  -webkit-text-decoration-color: #fad400;
+          text-decoration-color: #fad400;
+  text-decoration-thickness: 3px;
+  font-weight: 700;
+  color: #23303e;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+main .content .text a:hover {
+  text-decoration-thickness: 5px;
+}
+
+.testimonials {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.testimonials h3 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #a7abae;
+  margin-bottom: 70px;
+}
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.testimonials .container .box {
+  font-family: 'Barlow', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.testimonials .container .box img {
+  width: 60px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.testimonials .container .box p {
+  color: #818498;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.testimonials .container .box h4 {
+  font-family: 'Fraunces', serif;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 900;
+}
+.testimonials .container .box span {
+  color: #a7abae;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media (max-width: 767px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.gallery img {
+  width: 100%;
+}
+
+footer {
+  font-family: 'Barlow', sans-serif;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #91bfb5;
+}
+footer h3 {
+  margin-bottom: 40px;
+  color: #2c7566;
+  font-size: 25px;
+}
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+footer ul li {
+  margin-left: 20px;
+}
+footer ul li a {
+  display: block;
+  color: #458c7e;
+  text-decoration: none;
+  font-size: 18px;
+}
+footer .icons svg {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */

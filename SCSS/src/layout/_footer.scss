@@ -1,0 +1,39 @@
+footer {
+  font-family: 'Barlow', sans-serif;
+  $footerColor : hsl(168, 34%, 41%);
+  padding-top: 40px;
+  padding-bottom: 50px;
+  @include flex-center();
+  flex-direction: column;
+  background-color: #91bfb5;
+
+  h3 {
+    margin-bottom: 40px;
+    color: rgb(44, 117, 102);
+    font-size: 25px
+  }
+
+  ul {
+    @include flex-center();
+    margin-bottom: 80px;
+
+    li {
+      margin-left: 20px;
+
+      a {
+        display: block;
+        color: $footerColor;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .icons {
+    svg {
+
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  }
+}
